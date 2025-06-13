@@ -47,7 +47,7 @@ jobs:
           name: linux-libs
           path: |
             physx-jni/build/libs/*.jar
-            physx-jni-android/build/libs/*.jar
+            physx-jni-android/build/*
             physx-jni-natives-linux/build/libs/*.jar
             physx-jni-natives-linux-cuda/build/libs/*.jar
           compression-level: 0
