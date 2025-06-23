@@ -50,9 +50,15 @@ jobs:
           name: linux-libs
           path: |
             physx-jni/build/libs/*.jar
-            physx-jni-android/build/outputs/aar/*.aar
             physx-jni-natives-linux/build/libs/*.jar
             physx-jni-natives-linux-cuda/build/libs/*.jar
+          compression-level: 9
+
+      - name: Upload Android aar artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-aar
+          path: physx-jni-android/build/outputs/aar/*.aar
           compression-level: 9
 
   build_windows:
